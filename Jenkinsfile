@@ -26,7 +26,14 @@ pipeline {
 
     stage('depoly ') {
       steps {
+        input(message: 'are u sure to depoly', ok: 'yes im sure ')
         echo 'depolyment compelted'
+      }
+    }
+
+    stage('notify for new build') {
+      steps {
+        echo 'new build completeed successfully'
       }
     }
 
